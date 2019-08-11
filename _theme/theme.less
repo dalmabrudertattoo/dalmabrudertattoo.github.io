@@ -1,0 +1,35 @@
+@header-height: 30px;
+@sidebar-width: 25%;
+
+#main {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @header-height;
+
+    background-color: gray;
+  }
+
+  sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: @header-height;
+    height: ~"calc(100% - @{header-height})";
+    width: @sidebar-width;
+
+    background-color: lightgray;
+  }
+
+  content {
+    position: fixed;
+    left: @sidebar-width;
+    top: @header-height;
+    bottom: 0;
+    right: 0;
+    width: ~"calc(100% - @{sidebar-width})";
+    overflow: auto;
+  }
+}

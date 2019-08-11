@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Dalma Bruder Tattoo</title>
+  <link rel="stylesheet" type="text/css" href="{{relative 'public/core.css'}}">
+  <link rel="stylesheet" type="text/css" href="{{relative 'public/theme.css'}}">
+</head>
+<body>
+  <div id="main">
+    <header>
+      DALMABRUDERTATTOO
+    </header>
+
+    <sidebar>
+    </sidebar>
+
+    <content>
+      {{#with album}}
+        {{#each files}}
+          <img src="{{relative urls.small}}" alt="tattoo photo">
+        {{/each}}
+      {{/with}}
+    </content>
+  </div>
+</body>
+</html>
+
