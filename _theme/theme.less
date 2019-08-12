@@ -1,5 +1,5 @@
 @header-height: 30px;
-@sidebar-width: 25%;
+@sidebar-width: 250px;
 
 #main {
   header {
@@ -31,5 +31,10 @@
     right: 0;
     width: ~"calc(100% - @{sidebar-width})";
     overflow: auto;
+
+    img {
+       width: 200px;
+       height: auto;
+    }
   }
 }
