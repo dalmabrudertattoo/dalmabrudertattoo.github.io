@@ -1,9 +1,8 @@
 #!/bin/bash
 
-parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-cd "$parent_path/.."
+cd "${0%/*}/.." || exit
 
-docker run --rm -v `pwd`:/work \
+docker run --rm -v "$(pwd)":/work \
   thumbsupgallery/thumbsup \
     thumbsup \
       --input /work/_input \
