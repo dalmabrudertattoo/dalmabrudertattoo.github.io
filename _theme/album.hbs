@@ -5,6 +5,7 @@
   <title>Dalma Bruder Tattoo</title>
   <link rel="stylesheet" type="text/css" href="{{relative 'public/core.css'}}">
   <link rel="stylesheet" type="text/css" href="{{relative 'public/theme.css'}}">
+  <link rel="stylesheet" type="text/css" href="{{relative 'public/css/lightgallery.min.css'}}">
 </head>
 <body>
   <div id="main">
@@ -15,14 +16,30 @@
     <sidebar>
     </sidebar>
 
-    <content>
-      {{#with album}}
-        {{#each files}}
-          <img src="{{relative urls.small}}" alt="tattoo photo">
-        {{/each}}
-      {{/with}}
+    <content id="lg">
+      {{#each (groupByYearAndMonth album.files)}}
+        <div>
+          {{@key}}
+          <hr />
+          {{#each this}}
+            <a href="{{relative urls.large}}">
+              <img src="{{relative urls.small}}">
+            </a>
+          {{/each}}
+        </div>
+      {{/each}}
     </content>
   </div>
+
+  <script src="{{relative 'public/js/jquery.min.js'}}"></script>
+  <script src="{{relative 'public/js/lightgallery.min.js'}}"></script>
+  <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+  <script src="{{relative 'public/js/jquery.mousewheel.min.js'}}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#lg').lightGallery();
+    });
+  </script>
 </body>
 </html>
 
