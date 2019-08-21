@@ -1,6 +1,10 @@
 @header-height: 30px;
 @sidebar-width: 250px;
 
+body {
+  overflow: hidden;
+}
+
 #main {
   header {
     position: fixed;
@@ -23,7 +27,7 @@
     background-color: lightgray;
   }
 
-  content {
+  #albums {
     position: fixed;
     left: @sidebar-width;
     top: @header-height;
@@ -32,9 +36,10 @@
     width: ~"calc(100% - @{sidebar-width})";
     overflow: auto;
 
-    img {
+    a > img {
        width: 200px;
        height: auto;
+       cursor: pointer;
     }
   }
 }

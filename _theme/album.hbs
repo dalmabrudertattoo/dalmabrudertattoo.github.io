@@ -19,11 +19,14 @@
     </header>
 
     <sidebar>
+      {{#each (objectKeys (groupByYearAndMonth album.files))}}
+        <div class="month" id="{{slugify this}}">{{this}}</div>
+      {{/each}}
     </sidebar>
 
     <content id="albums">
       {{#each (groupByYearAndMonth album.files)}}
-        <div>
+        <div id="{{slugify @key}}">
           {{@key}}
           <hr />
           {{#each this}}
@@ -39,14 +42,7 @@
   <script src="{{relative 'public/js/jquery.min.js'}}"></script>
   <script src="{{relative 'public/js/lightgallery.min.js'}}"></script>
   <script src="{{relative 'public/js/jquery.mousewheel.min.js'}}"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#albums').lightGallery({
-        selector: '.item'
-      });
-    });
-  </script>
+  <script src="{{relative 'public/js/theme.js'}}" type="text/javascript"></script>
 </body>
 </html>
 
