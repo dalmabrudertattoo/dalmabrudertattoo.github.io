@@ -20,7 +20,7 @@
 
     <sidebar>
       {{#each (objectKeys (groupByYearAndMonth album.files))}}
-        <div class="month" id="{{slugify this}}">{{this}}</div>
+        <div class="month" href="{{slugify this}}">{{this}}</div>
       {{/each}}
     </sidebar>
 
@@ -40,8 +40,9 @@
   </div>
 
   <script src="{{relative 'public/js/jquery.min.js'}}"></script>
-  <script src="{{relative 'public/js/lightgallery.min.js'}}"></script>
   <script src="{{relative 'public/js/jquery.mousewheel.min.js'}}"></script>
+  <script src="{{relative 'public/js/jquery.scrollTo.min.js'}}"></script>
+  <script src="{{relative 'public/js/lightgallery.min.js'}}"></script>
   <script src="{{relative 'public/js/theme.js'}}" type="text/javascript"></script>
 </body>
 </html>

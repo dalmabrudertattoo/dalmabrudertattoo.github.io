@@ -4,10 +4,11 @@ $(document).ready(function () {
     download: false,
     selector: '.item'
   });
-  $('sidebar').click(function () {
-    $(albums).animate({
-      scrollTop: $('#2019-Januar').offset().top - $('#albums').offset()
-    }, 300);
+  $('sidebar .month').click(function () {
+    console.log($(this).attr('href'));
+    // $(albums).animate({
+    //   scrollTop: $('#2019-Januar').offset().top - $('#albums').offset()
+    // }, 300);
   });
 });
 
