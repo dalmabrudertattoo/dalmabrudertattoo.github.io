@@ -8,6 +8,7 @@
 
   <title>Dalma Bruder Tattoo</title>
 
+  <link rel="stylesheet" type="text/css" href="{{relative 'public/normalize.css'}}" />
   <link rel="stylesheet" type="text/css" href="{{relative 'public/core.css'}}" />
   <link rel="stylesheet" type="text/css" href="{{relative 'public/theme.css'}}" />
   <link rel="stylesheet" type="text/css" href="{{relative 'public/css/lightgallery.min.css'}}" />
@@ -19,6 +20,10 @@
     </header>
 
     <sidebar>
+      <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
+      <div class="maps">Térkép</div>
+      <div class="instagram"></div>
+
       {{#each (objectKeys (groupByYearAndMonth album.files))}}
         <div class="month" href="{{slugify this}}">{{this}}</div>
       {{/each}}

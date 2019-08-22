@@ -1,14 +1,15 @@
 $(document).ready(function () {
   var albums = $('#albums');
+
   albums.lightGallery({
     download: false,
-    selector: '.item'
+    selector: '.item',
+    speed: 350
   });
+
   $('sidebar .month').click(function () {
-    console.log($(this).attr('href'));
-    // $(albums).animate({
-    //   scrollTop: $('#2019-Januar').offset().top - $('#albums').offset()
-    // }, 300);
+    var scrollTo = $('#' + $(this).attr('href'));
+    $(albums).scrollTo(scrollTo, 300);
   });
 });
 
