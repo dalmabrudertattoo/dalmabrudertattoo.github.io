@@ -1,0 +1,53 @@
+body {
+  overflow: hidden;
+}
+#main header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: gray;
+}
+#main sidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 30px;
+  height: calc(100% - 30px);
+  width: 250px;
+  background-color: lightgray;
+}
+#main sidebar .month {
+  cursor: pointer;
+}
+#main #albums {
+  position: fixed;
+  left: 250px;
+  top: 30px;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 250px);
+  overflow: auto;
+}
+#main #albums a > img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+.map-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.map-container iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.modal-header {
+  padding: 0.2rem 0.5rem !important;
+}
