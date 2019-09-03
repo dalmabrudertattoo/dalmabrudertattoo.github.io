@@ -6,28 +6,48 @@ body {
 }
 
 #main {
-  header {
+  header.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: @header-height;
-
     background-color: gray;
+    padding: 0 30px;
+
+    .header-left {
+      display: inline-block;
+      float: left;
+    }
+
+    .header-right {
+      display: none;
+      float: right;
+    }
   }
 
-  sidebar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    top: @header-height;
-    height: ~"calc(100% - @{header-height})";
-    width: @sidebar-width;
+  sidebar.sidebar {
+    &.desktop {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      top: @header-height;
+      height: ~"calc(100% - @{header-height})";
+      width: @sidebar-width;
+      background-color: lightgray;
 
-    background-color: lightgray;
+      .month {
+        cursor: pointer; 
+      }
+    }
 
-    .month {
-      cursor: pointer; 
+    &.mobile {
+      position: fixed;
+      top: @header-height;
+      width: 100vw;
+      height: ~"calc(100vh - @{header-height})";
+      background-color: white;
+      z-index: 100;
     }
   }
 
@@ -63,11 +83,18 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .modal-header.small {
   padding: 0.2rem 0.5rem;
 }
 
-.no-padding { padding: 0 !important; }
+.no-padding {
+  padding: 0 !important;
+}
+
 .no-border {
   border: 0 !important;
   border-top: 0 !important;
@@ -76,3 +103,21 @@ body {
   border-left: 0 !important;
 }
 
+@media screen and (max-width: 767px) {
+  #main {
+    header.header {
+      .header-right {
+        display: inline-block;
+      }       
+    }
+
+    #albums {
+      width: 100%;
+      left: 0;
+    }
+
+    sidebar.sidebar.desktop {
+      display: none;
+    }
+  }
+}

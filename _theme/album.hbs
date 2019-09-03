@@ -17,14 +17,29 @@
 </head>
 <body>
   <div id="main">
-    <header>
-      DALMABRUDERTATTOO
+    <header class="header">
+      <div class="header-left">
+        DALMABRUDERTATTOO
+      </div>
+      <div class="header-right">
+        <i id="mobile-sidebar-opener" class="fas fa-bars"></i>
+      </div>
     </header>
 
-    <sidebar>
+    <sidebar class="sidebar desktop">
       <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
-      <button class="maps" type="button" data-toggle="modal" data-target=".map-modal">Térkép</button>
-      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank">@dalmabrudertattoo</a>
+      <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
+      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
+
+      {{#each (objectKeys (groupByYearAndMonth album.files))}}
+        <div class="month" href="{{slugify this}}">{{this}}</div>
+      {{/each}}
+    </sidebar>
+
+    <sidebar class="sidebar mobile hidden">
+      <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
+      <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
+      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
 
       {{#each (objectKeys (groupByYearAndMonth album.files))}}
         <div class="month" href="{{slugify this}}">{{this}}</div>
