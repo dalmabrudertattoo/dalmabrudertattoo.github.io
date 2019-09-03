@@ -1,15 +1,24 @@
 body {
   overflow: hidden;
 }
-#main header {
+#main header.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 30px;
   background-color: gray;
+  padding: 0 30px;
 }
-#main sidebar {
+#main header.header .header-left {
+  display: inline-block;
+  float: left;
+}
+#main header.header .header-right {
+  display: none;
+  float: right;
+}
+#main sidebar.sidebar.desktop {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -18,8 +27,16 @@ body {
   width: 250px;
   background-color: lightgray;
 }
-#main sidebar .month {
+#main sidebar.sidebar.desktop .month {
   cursor: pointer;
+}
+#main sidebar.sidebar.mobile {
+  position: fixed;
+  top: 30px;
+  width: 100vw;
+  height: calc(100vh - 30px);
+  background-color: white;
+  z-index: 100;
 }
 #main #albums {
   position: fixed;
@@ -48,6 +65,9 @@ body {
   height: 100%;
   width: 100%;
 }
+.hidden {
+  display: none;
+}
 .modal-header.small {
   padding: 0.2rem 0.5rem;
 }
@@ -60,4 +80,16 @@ body {
   border-right: 0 !important;
   border-bottom: 0 !important;
   border-left: 0 !important;
+}
+@media screen and (max-width: 767px) {
+  #main header.header .header-right {
+    display: inline-block;
+  }
+  #main #albums {
+    width: 100%;
+    left: 0;
+  }
+  #main sidebar.sidebar.desktop {
+    display: none;
+  }
 }

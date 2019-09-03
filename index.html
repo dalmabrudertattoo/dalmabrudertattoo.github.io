@@ -25,14 +25,29 @@
 </head>
 <body>
   <div id="main">
-    <header>
-      DALMABRUDERTATTOO
+    <header class="header">
+      <div class="header-left">
+        DALMABRUDERTATTOO
+      </div>
+      <div class="header-right">
+        <i id="mobile-sidebar-opener" class="fas fa-bars"></i>
+      </div>
     </header>
 
-    <sidebar>
+    <sidebar class="sidebar desktop">
       <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
-      <button class="maps" type="button" data-toggle="modal" data-target=".map-modal">Térkép</button>
-      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank">@dalmabrudertattoo</a>
+      <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
+      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
+
+        <div class="month" href="2019-Junius">2019 Június</div>
+        <div class="month" href="2019-Januar">2019 Január</div>
+        <div class="month" href="2018-Szeptember">2018 Szeptember</div>
+    </sidebar>
+
+    <sidebar class="sidebar mobile hidden">
+      <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
+      <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
+      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
 
         <div class="month" href="2019-Junius">2019 Június</div>
         <div class="month" href="2019-Januar">2019 Január</div>
@@ -43,14 +58,14 @@
         <div id="2019-Junius">
           2019 Június
           <hr />
+            <a class="item" data-src="media/large/Example copy.jpg">
+              <img src="media/small/Example copy.jpg">
+            </a>
             <a class="item" data-src="media/large/Example copy 11.jpg">
               <img src="media/small/Example copy 11.jpg">
             </a>
             <a class="item" data-src="media/large/Example copy 10.jpg">
               <img src="media/small/Example copy 10.jpg">
-            </a>
-            <a class="item" data-src="media/large/Example copy.jpg">
-              <img src="media/small/Example copy.jpg">
             </a>
         </div>
         <div id="2019-Januar">
