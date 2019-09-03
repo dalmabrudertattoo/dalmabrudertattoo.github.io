@@ -47,10 +47,21 @@ body {
   width: calc(100% - 250px);
   overflow: auto;
 }
-#main #albums a > img {
-  width: 200px;
+#main #albums .item {
+  display: block;
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#main #albums .item > img {
   height: auto;
+  width: 100%;
   cursor: pointer;
+}
+.flex-container {
+  display: flex;
 }
 .map-container {
   position: relative;
