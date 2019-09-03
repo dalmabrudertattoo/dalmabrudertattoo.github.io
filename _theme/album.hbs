@@ -51,11 +51,13 @@
         <div id="{{slugify @key}}">
           {{@key}}
           <hr />
-          {{#each this}}
-            <a class="item" data-src="{{relative urls.large}}">
-              <img src="{{relative urls.small}}">
-            </a>
-          {{/each}}
+          <div class="flex-container">
+            {{#each this}}
+              <div class="col-md-4 no-gutters no-padding">
+                <a class="item" data-src="{{relative urls.large}}" style="background-image: url('{{relative urls.small}}');"></a>
+              </div>
+            {{/each}}
+          </div>
         </div>
       {{/each}}
     </content>
