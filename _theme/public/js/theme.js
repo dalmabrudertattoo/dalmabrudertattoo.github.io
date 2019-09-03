@@ -11,5 +11,9 @@ $(document).ready(function () {
     var scrollTo = $('#' + $(this).attr('href'));
     $(albums).scrollTo(scrollTo, 300);
   });
+
+  $('#mobile-sidebar-opener').click(function () {
+     $('sidebar.sidebar.mobile').toggleClass('hidden');
+  });
 });
 
