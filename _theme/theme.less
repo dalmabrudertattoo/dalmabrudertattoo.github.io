@@ -1,8 +1,14 @@
 @header-height: 30px;
+@header-height-mobile: 60px;
 @sidebar-width: 250px;
+@sidebar-height: ~"calc(100% - @{header-height})";
+@content-height-mobile: ~"calc(100% - @{header-height})";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada&display=swap');
 
 body {
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 #main {
@@ -12,10 +18,14 @@ body {
     left: 0;
     right: 0;
     height: @header-height;
+    line-height: @header-height;
     background-color: gray;
     padding: 0 30px;
+    font-size: 1.3em;
+    font-weight: 900;
 
     .header-left {
+      font-family: 'Montserrat Subrayada', sans-serif;
       display: inline-block;
       float: left;
     }
@@ -27,27 +37,16 @@ body {
   }
 
   sidebar.sidebar {
-    &.desktop {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      top: @header-height;
-      height: ~"calc(100% - @{header-height})";
-      width: @sidebar-width;
-      background-color: lightgray;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: @header-height;
+    height: @sidebar-height;
+    width: @sidebar-width;
+    background-color: lightgray;
 
-      .month {
-        cursor: pointer; 
-      }
-    }
-
-    &.mobile {
-      position: fixed;
-      top: @header-height;
-      width: 100vw;
-      height: ~"calc(100vh - @{header-height})";
-      background-color: white;
-      z-index: 100;
+    .month {
+      cursor: pointer; 
     }
   }
 
@@ -62,17 +61,21 @@ body {
 
     .item {
       display: block;
-      height: 250px;
       width: 100%;
+      height: 150px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      cursor: zoom-in;
+      transition: transform .2s ease-in-out;
 
-      > img {
-        height: auto;
-        width: 100%;
-        cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
       }
+    }
+
+    .album-header {
+      padding: 10px;
     }
   }
 }
@@ -119,6 +122,10 @@ body {
 @media screen and (max-width: 767px) {
   #main {
     header.header {
+      height: @header-height-mobile;
+      line-height: @header-height-mobile;
+      font-size: 2.2em;
+
       .header-right {
         display: inline-block;
       }       
@@ -127,10 +134,35 @@ body {
     #albums {
       width: 100%;
       left: 0;
+      top: @header-height-mobile;
+      height: @content-height-mobile;
+
+      .item {
+        height: 250px;
+      }
     }
 
-    sidebar.sidebar.desktop {
-      display: none;
+    sidebar.sidebar {
+      z-index: 10;
+      width: 100%;
+      overflow-y: hidden;
+      height: 0;
+      top: @header-height-mobile;
+      transition: height .3s cubic-bezier(0, 1, 0.5, 1);
+
+      &.sidebar-open {
+        height: @content-height-mobile;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #main {
+    #albums {
+      .item {
+        height: 350px;
+      } 
     }
   }
 }

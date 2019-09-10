@@ -9,6 +9,7 @@ rm public/js/bootstrap.min.js
 rm public/css/fontawesome-all.min.css
 rm public/css/lightgallery.min.css
 rm public/css/bootstrap.min.css
+rm public/css/animate.min.css
 rm public/img/loading.gif
 rm -rf public/webfonts
 rm -rf public/fonts
