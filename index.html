@@ -21,11 +21,12 @@
   <link rel="stylesheet" type="text/css" href="public/theme.css" />
   <link rel="stylesheet" type="text/css" href="public/css/lightgallery.min.css" />
   <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/animate.min.css" />
   <link rel="stylesheet" type="text/css" href="public/css/fontawesome-all.min.css" />
 </head>
 <body>
   <div id="main">
-    <header class="header">
+    <header class="header animated fadeInDown">
       <div class="header-left">
         DALMABRUDERTATTOO
       </div>
@@ -34,17 +35,7 @@
       </div>
     </header>
 
-    <sidebar class="sidebar desktop">
-      <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
-      <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
-      <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
-
-        <div class="month" href="2019-Junius">2019 Június</div>
-        <div class="month" href="2019-Januar">2019 Január</div>
-        <div class="month" href="2018-Szeptember">2018 Szeptember</div>
-    </sidebar>
-
-    <sidebar class="sidebar mobile hidden">
+    <sidebar class="sidebar animated fadeInLeft">
       <div class="address">7623 Pécs, Ferencesek utcája 34.</div>
       <div class="maps" data-toggle="modal" data-target=".map-modal">Térkép</div>
       <a class="instagram" href="https://www.instagram.com/dalmabrudertattoo" target="_blank"><i class="fab fa-instagram"></i> @dalmabrudertattoo</a>
@@ -55,38 +46,35 @@
     </sidebar>
 
     <content id="albums">
-        <div id="2019-Junius">
-          2019 Június
-          <hr />
-          <div class="flex-container">
-              <div class="col-md-4 no-gutters no-padding">
-                <a class="item" data-src="media/large/Example copy 10.jpg" style="background-image: url('media/small/Example copy 10.jpg');"></a>
-              </div>
-              <div class="col-md-4 no-gutters no-padding">
+        <div id="2019-Junius" class="animated fadeInUp">
+          <h6 class="album-header">2019 Június</h6>
+          <div class="row no-gutters">
+              <div class="col-12 col-sm-6 col-md-4">
                 <a class="item" data-src="media/large/Example copy 11.jpg" style="background-image: url('media/small/Example copy 11.jpg');"></a>
               </div>
-              <div class="col-md-4 no-gutters no-padding">
+              <div class="col-12 col-sm-6 col-md-4">
+                <a class="item" data-src="media/large/Example copy 10.jpg" style="background-image: url('media/small/Example copy 10.jpg');"></a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
                 <a class="item" data-src="media/large/Example copy.jpg" style="background-image: url('media/small/Example copy.jpg');"></a>
               </div>
           </div>
         </div>
-        <div id="2019-Januar">
-          2019 Január
-          <hr />
-          <div class="flex-container">
-              <div class="col-md-4 no-gutters no-padding">
+        <div id="2019-Januar" class="animated fadeInUp">
+          <h6 class="album-header">2019 Január</h6>
+          <div class="row no-gutters">
+              <div class="col-12 col-sm-6 col-md-4">
                 <a class="item" data-src="media/large/Example999.jpg" style="background-image: url('media/small/Example999.jpg');"></a>
               </div>
           </div>
         </div>
-        <div id="2018-Szeptember">
-          2018 Szeptember
-          <hr />
-          <div class="flex-container">
-              <div class="col-md-4 no-gutters no-padding">
+        <div id="2018-Szeptember" class="animated fadeInUp">
+          <h6 class="album-header">2018 Szeptember</h6>
+          <div class="row no-gutters">
+              <div class="col-12 col-sm-6 col-md-4">
                 <a class="item" data-src="media/large/Example9 copy.jpg" style="background-image: url('media/small/Example9 copy.jpg');"></a>
               </div>
-              <div class="col-md-4 no-gutters no-padding">
+              <div class="col-12 col-sm-6 col-md-4">
                 <a class="item" data-src="media/large/Example9.jpg" style="background-image: url('media/small/Example9.jpg');"></a>
               </div>
           </div>
