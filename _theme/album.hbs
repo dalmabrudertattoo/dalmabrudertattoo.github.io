@@ -37,9 +37,9 @@
       {{/each}}
     </sidebar>
 
-    <content id="albums">
+    <content id="albums" class="animated fadeInUp">
       {{#each (groupByYearAndMonth album.files)}}
-        <div id="{{slugify @key}}" class="animated fadeInUp">
+        <div id="{{slugify @key}}">
           <h6 class="album-header">{{@key}}</h6>
           <div class="row no-gutters">
             {{#each this}}
