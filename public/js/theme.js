@@ -15,5 +15,13 @@ $(document).ready(function () {
   $('#mobile-sidebar-opener').click(function () {
     $('sidebar.sidebar').toggleClass('sidebar-open');
   });
+
+  const observer = lozad('.lozad', {
+    loaded: function (el) {
+      el.classList.add('animated'); 
+      el.classList.add('fadeInUp'); 
+    }
+  });
+  observer.observe();
 });
 
