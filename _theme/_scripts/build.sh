@@ -10,6 +10,7 @@ cp node_modules/jquery/dist/jquery.min.js public/js/
 cp node_modules/jquery.scrollto/jquery.scrollTo.min.js public/js/
 cp node_modules/lightgallery/dist/js/lightgallery.min.js public/js/
 cp node_modules/bootstrap/dist/js/bootstrap.min.js public/js/
+cp node_modules/lozad/dist/lozad.min.js public/js/
 cp node_modules/lightgallery/dist/css/lightgallery.min.css public/css/
 cp node_modules/bootstrap/dist/css/bootstrap.min.css public/css/
 cp node_modules/animate.css/animate.min.css public/css/

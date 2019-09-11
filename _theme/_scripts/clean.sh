@@ -6,6 +6,7 @@ rm public/js/jquery.min.js
 rm public/js/jquery.scrollTo.min.js
 rm public/js/lightgallery.min.js
 rm public/js/bootstrap.min.js
+rm public/js/lozad.min.js
 rm public/css/fontawesome-all.min.css
 rm public/css/lightgallery.min.css
 rm public/css/bootstrap.min.css
