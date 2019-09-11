@@ -37,14 +37,14 @@
       {{/each}}
     </sidebar>
 
-    <content id="albums" class="animated fadeInUp">
+    <content id="albums">
       {{#each (groupByYearAndMonth album.files)}}
         <div id="{{slugify @key}}">
           <h6 class="album-header">{{@key}}</h6>
           <div class="row no-gutters">
             {{#each this}}
               <div class="col-12 col-sm-6 col-md-4">
-                <a class="item" data-src="{{relative urls.large}}" style="background-image: url('{{relative urls.small}}');"></a>
+                <a class="item lozad" data-src="{{relative urls.large}}" data-background-image="{{relative urls.small}}"></a>
               </div>
             {{/each}}
           </div>
@@ -76,6 +76,7 @@
   <script src="{{relative 'public/js/jquery.scrollTo.min.js'}}"></script>
   <script src="{{relative 'public/js/bootstrap.min.js'}}"></script>
   <script src="{{relative 'public/js/lightgallery.min.js'}}"></script>
+  <script src="{{relative 'public/js/lozad.min.js'}}"></script>
   <script src="{{relative 'public/js/theme.js'}}" type="text/javascript"></script>
 </body>
 </html>
