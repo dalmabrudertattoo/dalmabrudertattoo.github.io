@@ -4,6 +4,7 @@ cd "${0%/*}/.." || exit
 
 rm public/js/jquery.min.js
 rm public/js/jquery.scrollTo.min.js
+rm public/js/jquery.mousewheel.js
 rm public/js/lightgallery.min.js
 rm public/js/bootstrap.min.js
 rm public/js/lozad.min.js

@@ -8,6 +8,7 @@ cd "${0%/*}/.." || exit
 
 cp node_modules/jquery/dist/jquery.min.js public/js/
 cp node_modules/jquery.scrollto/jquery.scrollTo.min.js public/js/
+cp node_modules/jquery-mousewheel/jquery.mousewheel.js public/js/
 cp node_modules/lightgallery/dist/js/lightgallery.min.js public/js/
 cp node_modules/bootstrap/dist/js/bootstrap.min.js public/js/
 cp node_modules/lozad/dist/lozad.min.js public/js/
